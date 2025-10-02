@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "us-couple-canvas",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_SUPABASE_URL": "@supabase-url",
+    "VITE_SUPABASE_ANON_KEY": "@supabase-anon-key",
+    "VITE_CLOUDINARY_CLOUD_NAME": "@cloudinary-cloud-name"
+  },
+  "framework": "vite"
+}
